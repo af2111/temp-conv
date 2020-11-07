@@ -1,9 +1,9 @@
 def getTemp():
     try:
-        temp = float(input("Gib eine Temperatur an:\n"))
+        temp = float(input("Provide a Temperature:\n"))
         return temp
     except ValueError:
-        print("Gib eine gültige Zahl an, plox.")
+        print("Provide a valid number, plox.")
         temp = getTemp()
         return temp
 def CelsToKelvin(celsius):
@@ -26,34 +26,34 @@ def FahrenheitToKelvin(fahrenheit):
     return kelvin
 if __name__ == "__main__":
     while True:
-        opp = input("Welche Möglichkeit willst du wählen? \n(1) Celsius in Kelvin\n(2) Kelvin in Celsius\n(3) Celsius in Fahrenheit\n(4) Fahrenheit in Celsius\n(5) Kelvin in Fahrenheit\n(6) Fahrenheit in Kelvin\n")
+        opp = input("Which temperatures do you want to convert? \n(1) Celsius to Kelvin\n(2) Kelvin to Celsius\n(3) Celsius to Fahrenheit\n(4) Fahrenheit to Celsius\n(5) Kelvin to Fahrenheit\n(6) Fahrenheit to Kelvin\n")
 
         if opp == "1":
             temp = getTemp()
-            print(f"{temp} Grad Celsius sind {str(CelsToKelvin(temp))} Kelvin")
+            print(f"{temp} ° Celsius are {str(CelsToKelvin(temp))} Kelvin")
             break
         if opp == "2":
             temp = getTemp()
-            print(f"{temp} Kelvin sind {str(KelvinToCels(temp))} Grad Celsius")
+            print(f"{temp} Kelvin are {str(KelvinToCels(temp))} ° Celsius")
             break
         if opp == "3":
             temp = getTemp()
-            print(f"{temp} Grad Celsius sind {str(CelsToFahrenheit(temp))} Grad Fahrenheit")
+            print(f"{temp} ° Celsius are {str(CelsToFahrenheit(temp))} ° Fahrenheit")
             break
         if opp == "4":
             temp = getTemp()
-            print(f"{temp} Grad Fahrenheit sind {str(FahrenheitToCels(temp))} Grad Celsius")
+            print(f"{temp} ° Fahrenheit are {str(FahrenheitToCels(temp))} ° Celsius")
             break
         if opp == "5":
             temp = getTemp()
-            print(f"{temp} Kelvin sind {str(KelvinToFahrenheit(temp))} Grad Fahrenheit")
+            print(f"{temp} Kelvin are {str(KelvinToFahrenheit(temp))} ° Fahrenheit")
             break
         if opp == "6":
             temp = getTemp()
-            print(f"{temp} Grad Fahrenheit sind {str(FahrenheitToKelvin(temp))} Kelvin")
+            print(f"{temp} ° Fahrenheit are {str(FahrenheitToKelvin(temp))} Kelvin")
             break
         else:
-            print(f"Möglichkeit {opp} existiert nicht. Bitte versuche es erneut.")
+            print(f"Conversion method {opp} doesn't exist. Please try again.")
 
 
 
